@@ -1,0 +1,181 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+/* ------------------------ */
+
+/* global */
+ @font-face {
+    font-family: Outfit;
+    src: url(/./NFT-card-web/fonts/Outfit/Outfit-VariableFont_wght.ttf);
+ }
+ :root {
+   /* Color */
+  
+    /* ### Primary */
+
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+
+/* ### Neutral */
+
+--Very-dark-blue : hsl(217, 54%, 11%);  /*(main BG)*/
+--dark-blue-cardBg : hsl(216, 50%, 16%);  /*(card BG)*/
+--dark-blue-line : hsl(215, 32%, 27%); /*(line)*/
+--White: hsl(0, 0%, 100%);
+ }
+
+ body {
+    background-color: var(--Very-dark-blue);
+    font-family: Outfit;
+ }
+
+ /* --------------------------------- */
+
+ /* container */
+
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+ }
+ .container .card {
+    background-color: var(--dark-blue-cardBg);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 15px solid var(--dark-blue-cardBg);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 25%;
+    height: 550px;
+      box-shadow: 1px 7px 52px -4px #111;
+   
+    
+}
+
+ .container .card .main-img{
+     width: 100%;
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     cursor: pointer;
+}
+.container .card .main-img:hover {
+    content: url(/./NFT-card-web/images/active-states.png);
+}
+.container .card .texts h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--White);
+    cursor: pointer;
+}
+.container .card .texts h1:hover{
+    color: var(--Cyan);
+}
+.container .card .texts p {
+    margin-top: 10px;
+    color: var(--Soft-blue);
+    font-size: 17px;
+}
+.container .card .crystal {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.container .card .crystal .ethereum-img{
+    padding-right: 4px;
+}
+.container .card .crystal .clock-img{
+    padding-right: 2px;
+
+}
+.container .card .crystal h2 {
+    font-size: 16px;
+   padding-left: 4px;
+   color: var(--Cyan);
+}
+.container .card .crystal p {
+    color: var(--Soft-blue);
+}
+.container .card .fot-icon {
+    display: flex;
+    align-items: center;
+    
+}
+.container .card .fot-icon .avatar-img{
+     width: 12%;
+     border: 1.3px solid var(--White);
+     border-radius: 23px;
+     -webkit-border-radius: 23px;
+     -moz-border-radius: 23px;
+     -ms-border-radius: 23px;
+     -o-border-radius: 23px;
+     margin-top: 20px;
+}
+hr {
+    border-top: 1px solid var(--dark-blue-line);
+    border-bottom: 1px solid var(--dark-blue-line);
+    width: 100%;
+}
+.container .card .fot-icon p {
+    margin-top: 20px;
+    margin-left: 16px;
+    color: var(--Soft-blue);
+}
+.container .card .fot-icon p span {
+    color: var(--White);
+}
+.container .card .fot-icon p span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+/* mediaQuery */
+@media  screen and (max-width: 600px) {
+    .container .card {
+      
+        width: 90% !important;
+        height: auto !important;
+         
+        border: 18px solid var(--dark-blue-cardBg);
+        
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container .card {
+      
+        width: 31% ;
+        height: auto ;
+         
+        border: 18px solid var(--dark-blue-cardBg);
+        
+    }
+  
+}
+@media screen and (max-width: 900px) {
+    .container .card {
+      
+        width: 50% ;
+        height: auto ;
+         
+        border: 18px solid var(--dark-blue-cardBg);
+        
+    }
+  
+}
